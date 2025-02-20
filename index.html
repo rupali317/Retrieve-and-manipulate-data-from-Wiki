@@ -1,0 +1,40 @@
+<!--
+    Part 1:
+    Using an HTTP GET method, retrieve information from Wikipedia using a given topic. 
+    Query https://en.wikipedia.org/w/api.php?action=parse&section=0&prop=text&format=json&page=[topic] to get the topic Wikipedia article.
+
+    Print the total number of times that the string [topic] appears in the article's text field. Expose your backend code as an API.
+
+    Part 2:
+    Write a frontend that calls the API that you're exposing. The frontend can be very simple - just an input field and some way to 
+    submit and display the results. Feel free to be creative.
+-->
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="RRC" />
+    <link
+      href="JavaScript-logo.png"
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="main.js" defer></script>
+    <title>Fetch data from Wikipedia</title>
+  </head>
+  <body>
+    <!-- <form onSubmit="getDataFromWiki()"> -->
+    <!-- <form> -->
+    <label>Enter a topic:</label>
+    <input val="" placeholder="Eg: Singapore" type="text" />
+    <button>Submit</button>
+    <p id="js-count-occurence"></p>
+    <!-- <button onClick="getDataFromWiki()">Submit</button> -->
+    <!-- </form> -->
+    <p></p>
+  </body>
+</html>
