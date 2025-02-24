@@ -6,6 +6,12 @@ const app = express();
 app.use(cors()); // Allow all origins
 
 app.get("/wiki", async (req, res) => {
+  fetch("https://candystore.com/listofcandies.json")
+    .then((res) => res.json())
+    .then((data) => console.log(data))
+    .catch((err) => {
+      console.log("error occured", err);
+    });
   const topic = req.query.topic;
   const url = `https://en.wikipedia.org/w/api.php?action=parse&section=0&prop=text&format=json&page=${topic}`;
 
